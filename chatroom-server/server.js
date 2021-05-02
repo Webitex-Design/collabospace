@@ -5,40 +5,14 @@ const socket = require('socket.io')
 require("dotenv/config");
 
 /*===================================*/
-//            Auth Server             //
-/*===================================*/
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-//Middlewares
-app.use(bodyParser.json());
-
-//Import Routes
-const userAuthRoutes = require("./authserver/routes/users");
-
-//use Routes
-app.use("/userAuth", userAuthRoutes);
-
-//DB connection
-mongoose.connect(
-    "mongodb://localhost:27017/Collabospace",
-    { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-    () => {
-        console.log("Connected to DB!");
-    }
-);
-
-app.listen(port, () => {
-    console.log("Server listening on port " + port);
-});
-
-
-/*===================================*/
 //            Chat Server             //
 /*===================================*/
 
-/*app.set('view engine', 'ejs');
+
+const app = express();
+const port = process.env.PORT || 3000;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
 app.get('/', (req, res) => {
@@ -61,5 +35,7 @@ const server = app.listen(port, () => {
     console.log("Server listening on port " + port);
 });
 
+
 const io = socket(server);
-require('./utils/socket')(io);*/
+require('./utils/socket')(io);
+
