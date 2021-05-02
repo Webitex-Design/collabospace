@@ -12,8 +12,6 @@ export class MathComponent implements OnInit {
 
   entries = [];
 
-  constructor() { }
-
   onSubmit(){
     this.entries.push({topic: this.topic, title: this.title, body: this.body});
     this.topic = '';
@@ -21,6 +19,8 @@ export class MathComponent implements OnInit {
     this.body = '';
     console.log(this.entries)
   };
+
+  constructor() { }
 
   ngOnInit(): void {
   }
