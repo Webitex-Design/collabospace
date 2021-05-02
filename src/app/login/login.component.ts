@@ -13,28 +13,35 @@ export class LoginComponent implements OnInit {
   password = '';
   token;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  onLogin(){
+  onLogin() {
     this.entryType = 'Login'
   }
-  onSignup(){
+  onSignup() {
     this.entryType = 'Sign up'
   }
 
-  onSubmit(){
-    if(this.entryType==='Login'){
-      this.token = authActions.login(this.username, this.password);
+  async onSubmit() {
+    console.log("submitting");
+
+    if (this.entryType === 'Login') {
+      this.token = await authActions.login(this.username, this.password).token;
       this.username = '';
       this.password = '';
-    }else {
-      this.token = authActions.signup(this.username, this.password);
+    } else {
+      this.token = await authActions.signup(this.username, this.password).token;
       this.username = '';
       this.password = '';
     }
-    if(this.token){
-      this.router.navigate(['/main/home']);
+    if (this.token) {
+      console.log("token undefined");
+
     }
+
+    this.router.navigate(['/main/home']);
+
+    console.log(this.token)
   }
 
   ngOnInit(): void {
