@@ -1,6 +1,10 @@
+html {
+    font-family: 'Asap Condensed', sans-serif;
+}
+
 body {
     width: 100vw;
-    height: 100vh;
+    height: 85vh;
     margin: 0;
 }
 
