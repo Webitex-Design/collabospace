@@ -10,8 +10,8 @@ require("dotenv/config");
 
 
 const app = express();
-const port = process.env.PORT || 3000;
-app.use(bodyParser.urlencoded({ extended: false }));
+const port = process.env.PORT || 3001;
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
@@ -36,6 +36,10 @@ const server = app.listen(port, () => {
 });
 
 
-const io = socket(server);
+
+
+const io = socket(server, {
+    allowEIO3: true
+});
 require('./utils/socket')(io);
 
