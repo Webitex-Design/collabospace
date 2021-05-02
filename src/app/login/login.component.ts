@@ -6,6 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  entryType = 'Login';
+
+  onLogin(){
+    this.entryType = 'Login'
+  }
+  onSignup(){
+    this.entryType = 'Sign up'
+  }
 
   constructor() { }
 

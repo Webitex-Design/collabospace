@@ -1,1 +1,10 @@
-<p>login works!</p>
+<h1>{{entryType}}</h1>
+<label for="username">Username: </label>
+<input type="text" id="username">
+<br>
+<label for="username">Password: </label>
+<input type="text" id="username">
+<input type="submit" routerLink="main/home">
+<hr>
+<button (click)="onLogin()">Login</button>
+<button (click)="onSignup()">Sign up</button>
