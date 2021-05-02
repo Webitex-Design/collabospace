@@ -13,15 +13,20 @@ import { LanguageComponent } from './post-login/language/language.component';
 import { ElectiveComponent } from './post-login/elective/elective.component';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './post-login/sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './post-login/main/main.component';
 
 const appRoutes = [
-  {path: '', component: HomeComponent},
-  {path: 'math', component: MathComponent},
-  {path: 'science', component: ScienceComponent},
-  {path: 'english', component: EnglishComponent},
-  {path: 'history', component: HistoryComponent},
-  {path: 'language', component: LanguageComponent},
-  {path: 'elective', component: ElectiveComponent},
+  {path: '', component: LoginComponent},
+  {path: 'main', component: MainComponent, children: [
+    {path: 'home', component: HomeComponent},
+    {path: 'math', component: MathComponent},
+    {path: 'science', component: ScienceComponent},
+    {path: 'english', component: EnglishComponent},
+    {path: 'history', component: HistoryComponent},
+    {path: 'language', component: LanguageComponent},
+    {path: 'elective', component: ElectiveComponent},
+  ]},
 ];
 
 @NgModule({
@@ -35,6 +40,8 @@ const appRoutes = [
     LanguageComponent,
     ElectiveComponent,
     SidebarComponent,
+    LoginComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
