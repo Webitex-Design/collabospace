@@ -4,24 +4,29 @@ import { RouteConfigLoadEnd, Router, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MathComponent } from './math/math.component';
-import { ScienceComponent } from './science/science.component';
-import { EnglishComponent } from './english/english.component';
-import { HistoryComponent } from './history/history.component';
-import { LanguageComponent } from './language/language.component';
-import { ElectiveComponent } from './elective/elective.component';
+import { HomeComponent } from './post-login/home/home.component';
+import { MathComponent } from './post-login/math/math.component';
+import { ScienceComponent } from './post-login/science/science.component';
+import { EnglishComponent } from './post-login/english/english.component';
+import { HistoryComponent } from './post-login/history/history.component';
+import { LanguageComponent } from './post-login/language/language.component';
+import { ElectiveComponent } from './post-login/elective/elective.component';
 import { FormsModule } from '@angular/forms';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './post-login/sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
+import { MainComponent } from './post-login/main/main.component';
 
 const appRoutes = [
-  {path: '', component: HomeComponent},
-  {path: 'math', component: MathComponent},
-  {path: 'science', component: ScienceComponent},
-  {path: 'english', component: EnglishComponent},
-  {path: 'history', component: HistoryComponent},
-  {path: 'language', component: LanguageComponent},
-  {path: 'elective', component: ElectiveComponent},
+  {path: '', component: LoginComponent},
+  {path: 'main', component: MainComponent, children: [
+    {path: 'home', component: HomeComponent},
+    {path: 'math', component: MathComponent},
+    {path: 'science', component: ScienceComponent},
+    {path: 'english', component: EnglishComponent},
+    {path: 'history', component: HistoryComponent},
+    {path: 'language', component: LanguageComponent},
+    {path: 'elective', component: ElectiveComponent},
+  ]},
 ];
 
 @NgModule({
@@ -35,6 +40,8 @@ const appRoutes = [
     LanguageComponent,
     ElectiveComponent,
     SidebarComponent,
+    LoginComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

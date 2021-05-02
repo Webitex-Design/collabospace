@@ -1,6 +1,6 @@
 <div class="col-4">
     <div class="styles">
-        <h1>Math Discussion</h1>
+        <h1>Language Discussion</h1>
         <div class='form'>
             <label for="topic">Topic/Course: </label>
             <input type="text" id="topic" [(ngModel)]='topic'>
@@ -16,15 +16,11 @@
                 </div>
             </div>
             <div class="post" *ngFor="let entry of entries">
+                <hr>
                 <h1>Topic: {{entry.topic}}</h1>
-                <hr>
                 <h2>{{entry.title}}</h2>
-                <hr>
                 <p>{{entry.body}}</p>
             </div>
         </div>
     </div>
 </div>
-
-
-    

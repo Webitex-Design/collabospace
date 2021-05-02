@@ -1,0 +1,11 @@
+<h1>{{entryType}}</h1>
+<label for="username">Username: </label>
+<input type="text" id="username" [(ngModel)]='username'>
+<br>
+<label for="password">Password: </label>
+<input type="text" id="password" [(ngModel)]='password'>
+
+<input type="submit" (click)="onSubmit()">
+<hr>
+<button (click)="onLogin()">Login</button>
+<button (click)="onSignup()">Sign up</button>
