@@ -1,5 +1,5 @@
 {
-  "name": "collabospace-api",
+  "name": "chatroom-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

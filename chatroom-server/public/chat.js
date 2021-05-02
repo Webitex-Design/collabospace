@@ -6,6 +6,8 @@ const feedback = document.getElementById('feedback');
 const roomMessage = document.querySelector('.room-message');
 const users = document.querySelector('.users');
 
+
+
 //Socket server URL
 const socket = io.connect('https://localhost:3000');
 
@@ -14,6 +16,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const username = urlParams.get('username');
 const roomname = urlParams.get('roomname');
+console.log("hello");
 console.log(username, roomname);
 
 //Display the roomname the user is connected to
