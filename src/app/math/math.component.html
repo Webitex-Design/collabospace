@@ -16,10 +16,9 @@
                 </div>
             </div>
             <div class="post" *ngFor="let entry of entries">
+                <hr>
                 <h1>Topic: {{entry.topic}}</h1>
-                <hr>
                 <h2>{{entry.title}}</h2>
-                <hr>
                 <p>{{entry.body}}</p>
             </div>
         </div>
