@@ -1,24 +1,35 @@
-h1.topbar {
-    background-color: #664b89;
-    height: 8vh;
-    width: 100vw;
-    font-size: 60px;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-    color: white;
+.main {
+    display: inline-block;
+    padding-left: 10px;
 }
 
 .crate {
     text-align: center;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     margin: 24px;
     background-color: #BCB4C6;
-    box-shadow: 0 0 0 1px rgba(0,0,0,1), 2px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 2px 3px 0 rgba(0,0,0,0.1);
+    border-radius: 15px;
 }
 
+
+.math, .science, .english, .history, .language, .elective {
+    width: 350px;
+    height: 350px;
+    padding-top: 35%;
+}
+
+.crate :hover {
+    background-color: #8b7ba0;
+    width: 350px;
+    height: 65%;
+    border-radius: 15px;
+}
+
+
 .col-1 {width: 5vw;}
+.col-1-5 {width: 9vw;}
 .col-2 {width: 10vw;}
 .col-3 {width: 15vw;}
 .col-4 {width: 20vw;}
@@ -50,23 +61,4 @@ h1.topbar {
     display: table;
     clear: both;
     content: "";
-}
-
-ul {
-    list-style: none;
-    font-size: 35px;
-    display: block;
-    padding: 0;
-    margin: 0;
-}
-
-div.block {
-    background: #BCB4C6;
-}
-
-.bottom {
-    margin: 75vh 0 0 0;
-}
-.main {
-    display: flex;
 }
