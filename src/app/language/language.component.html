@@ -6,7 +6,7 @@
     <input type="text" id="title" [(ngModel)]='title'>
     <hr>
     <label for="body">Body: </label>
-    <input type="text" id="body" [(ngModel)]='body'>
+    <textarea rows='5' cols='40' id="body" [(ngModel)]='body'></textarea>
     <button type="submit" (click)="onSubmit()">Post!</button>
 
     <div *ngFor="let entry of entries">
