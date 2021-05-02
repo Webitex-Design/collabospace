@@ -4,15 +4,15 @@ import { RouteConfigLoadEnd, Router, RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { MathComponent } from './math/math.component';
-import { ScienceComponent } from './science/science.component';
-import { EnglishComponent } from './english/english.component';
-import { HistoryComponent } from './history/history.component';
-import { LanguageComponent } from './language/language.component';
-import { ElectiveComponent } from './elective/elective.component';
+import { HomeComponent } from './post-login/home/home.component';
+import { MathComponent } from './post-login/math/math.component';
+import { ScienceComponent } from './post-login/science/science.component';
+import { EnglishComponent } from './post-login/english/english.component';
+import { HistoryComponent } from './post-login/history/history.component';
+import { LanguageComponent } from './post-login/language/language.component';
+import { ElectiveComponent } from './post-login/elective/elective.component';
 import { FormsModule } from '@angular/forms';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { SidebarComponent } from './post-login/sidebar/sidebar.component';
 
 const appRoutes = [
   {path: '', component: HomeComponent},
